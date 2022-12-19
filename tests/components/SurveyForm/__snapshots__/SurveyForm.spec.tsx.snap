@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component should render component properly 1`] = `
+<div
+  className="start"
+>
+  <h3
+    className="title"
+  >
+    <strong>
+      Personality trait
+    </strong>
+  </h3>
+  <p
+    className="description"
+  >
+    Build a simple personality test application, that takes 3-5 different questions, maps them into a score and produces a personality trait of either Introvert or Extrovert.
+  </p>
+  <div
+    className="start-button-container"
+    onClick={[Function]}
+  >
+    Start
+  </div>
+</div>
+`;

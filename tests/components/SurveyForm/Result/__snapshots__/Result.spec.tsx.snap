@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Result component should render component properly 1`] = `
+<div
+  className="result"
+>
+  <div
+    className="result-header"
+  >
+    <strong>
+      0
+    </strong>
+  </div>
+  <div
+    className="title"
+  >
+    Your personality trait
+  </div>
+  <div
+    className="description"
+  >
+    Your score is 
+    0
+  </div>
+  <div
+    className="home-button-container button-container"
+    onClick={[Function]}
+  >
+    Home
+  </div>
+  <div
+    className="restart-button-container button-container"
+    onClick={[Function]}
+  >
+    Restart
+  </div>
+</div>
+`;

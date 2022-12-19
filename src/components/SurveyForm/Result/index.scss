@@ -1,0 +1,52 @@
+.result {
+  text-align: center;
+}
+
+.result-header {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 54px;
+  line-height: 41%;
+  letter-spacing: 0.2em;
+  color: #000;
+}
+
+strong {
+  font-size: 60px;
+}
+
+.title {
+  margin: 20px 20px 0;
+  font-size: 40px;
+}
+
+.description {
+  margin: 10px 20px 0;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.restart-button-container {
+  float: right;
+}
+
+.home-button-container {
+  float: left;
+}
+
+.button-container {
+  padding: 5px;
+  margin: auto;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: aqua;
+  padding: 5px;
+  margin-top: 30px;
+  margin-bottom: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

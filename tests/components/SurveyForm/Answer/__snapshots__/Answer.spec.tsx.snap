@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Answer component should render component properly 1`] = `
+<div
+  className="answerWrapper"
+>
+  <input
+    checked={true}
+    id="1"
+    name="answer"
+    onChange={[Function]}
+    type="radio"
+  />
+  <label
+    className="answerWord"
+    htmlFor="1"
+    id="1"
+  >
+    11
+  </label>
+</div>
+`;
