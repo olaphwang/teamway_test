@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { renderHook, render, screen, fireEvent } from '@testing-library/react';
 import SurveyForm from '@components/SurveyForm';
-import { uniqueIdGenerator } from '@components/SurveyForm/utils';
+import { uniqueIdGenerator } from '@sutils/index';
 import useSurveyFormHook from '@components/SurveyForm/useSurveyFormHook';
 
 describe('App component', () => {
@@ -17,7 +17,7 @@ describe('App component', () => {
 });
 
 describe('utils test', () => {
-  test('uniqueIdGenerator returns right string design', () => {
+  test('uniqueIdGenerator should return right value', () => {
     const questionWord = 'This is random question.';
     const answer = 'This is random answer.';
     const index = 1;
@@ -38,7 +38,7 @@ describe('useSurveyFormHook', () => {
 });
 
 describe('workflow', () => {
-  it('should work as expected way', async () => {
+  it('should work as expected', async () => {
     render(<SurveyForm />);
     fireEvent.click(screen.getByText(/start/i));
     expect(await screen.findAllByRole('radio')).toHaveLength(4);
@@ -54,7 +54,6 @@ describe('workflow', () => {
       fireEvent.click(screen.getAllByRole('radio')[0]);
       fireEvent.click(screen.getByText(/Next >/i));
     }
-    expect(await screen.getByText(/Home/i).getAttribute('class')).toBe('home-button-container button-container');
-    expect(await screen.getByText(/Restart/i).getAttribute('class')).toBe('restart-button-container button-container');
+    expect(await screen.getByText(/Your personality trait/i).getAttribute('class')).toBe('title');
   });
 });

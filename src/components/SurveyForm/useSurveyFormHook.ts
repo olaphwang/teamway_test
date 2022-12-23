@@ -1,15 +1,15 @@
 import { useState, useCallback, useEffect } from 'react';
-import questions from '@components/SurveyForm/questions';
-import { QuetionsData } from '@components/SurveyForm/types';
+import { Questions, SelectedAnswers } from '@stypes/questions';
+import questions from '@mockData/questions';
 
 const useSurveyFormHook = () => {
   const [questionIndex, setquestionIndex] = useState<number>(-1);
-  const [selectedAnswers, setselectedAnswers] = useState({});
-  const [quetionsData, setquestionsData] = useState<QuetionsData[]>([]);
+  const [selectedAnswers, setselectedAnswers] = useState<SelectedAnswers>({});
+  const [quetionsData, setquestionsData] = useState<Questions[]>([]);
 
   useEffect(() => {
-    setquestionsData(questions);
-  }, [quetionsData]);
+    setquestionsData(questions.map((q) => ({ ...q, answers: q.answers.sort(() => 0.5 - Math.random()) })));
+  }, []);
 
   const handleNext = useCallback(() => {
     if (questionIndex !== quetionsData.length) setquestionIndex((questionIndex) => questionIndex + 1);
@@ -19,16 +19,6 @@ const useSurveyFormHook = () => {
     if (questionIndex !== 0) setquestionIndex((questionIndex) => questionIndex - 1);
   }, [questionIndex, quetionsData]);
 
-  const handleReStart = useCallback(() => {
-    setquestionIndex(0);
-    setselectedAnswers({});
-  }, [questionIndex]);
-
-  const handleHome = useCallback(() => {
-    setquestionIndex(-1);
-    setselectedAnswers({});
-  }, [questionIndex]);
-
   return {
     questionIndex,
     setquestionIndex,
@@ -36,8 +26,6 @@ const useSurveyFormHook = () => {
     setselectedAnswers,
     quetionsData,
     setquestionsData,
-    handleReStart,
-    handleHome,
     handleNext,
     handlePrev,
   };

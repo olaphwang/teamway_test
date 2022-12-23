@@ -10,14 +10,8 @@ describe('Result component', () => {
     const {
       result: { current },
     } = renderHook(() => useSurveyFormHook());
-    const { handleHome, handleReStart, selectedAnswers } = current;
-    const componentRenderer = renderer.create(
-      <Result
-        handleHome={() => handleHome()}
-        handleReStart={() => handleReStart()}
-        selectedAnswers={selectedAnswers}
-      />,
-    );
+    const { selectedAnswers } = current;
+    const componentRenderer = renderer.create(<Result selectedAnswers={selectedAnswers} />);
     const tree = componentRenderer.toJSON();
 
     // then

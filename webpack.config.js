@@ -13,7 +13,9 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.scss'],
     alias: {
       '@components': path.resolve(__dirname, 'src/components'),
-      '@routes': path.resolve(__dirname, 'src/routes'),
+      '@mockData': path.resolve(__dirname, 'src/mockData'),
+      '@sutils': path.resolve(__dirname, 'src/utils'),
+      '@stypes': path.resolve(__dirname, 'src/types'),
     },
   },
   output: {

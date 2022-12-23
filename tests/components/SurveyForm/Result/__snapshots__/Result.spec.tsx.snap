@@ -22,17 +22,5 @@ exports[`Result component should render component properly 1`] = `
     Your score is 
     0
   </div>
-  <div
-    className="home-button-container button-container"
-    onClick={[Function]}
-  >
-    Home
-  </div>
-  <div
-    className="restart-button-container button-container"
-    onClick={[Function]}
-  >
-    Restart
-  </div>
 </div>
 `;

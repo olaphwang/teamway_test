@@ -1,6 +1,6 @@
 .questionText {
   color: #5e4b6e;
-  font-size: 20px;
+  font-size: 2em;
   font-weight: bold;
   word-wrap: break-word;
   text-align: center;
@@ -13,7 +13,7 @@
   border-width: 0px;
   margin: 20px;
   color: white;
-  font-size: 16px;
+  font-size: 1em;
   align-self: center;
   width: 100px;
   text-align: center;
@@ -24,7 +24,10 @@
   background-color: gray;
   cursor: default;
 }
-
+.buttonGroup {
+  display: flex;
+  justify-content: space-around;
+}
 .next {
   float: right;
 }
@@ -36,7 +39,7 @@
 .questionsCounter {
   align-self: flex-end;
   color: #bdbdbd;
-  font-size: 13px;
+  font-size: 1.1em;
   font-weight: 500;
   margin-bottom: 16px;
 }
